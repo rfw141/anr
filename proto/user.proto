@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package user.v1;
+
+import "common.proto";
+
+option go_package = "github.com/rfw141/anr/gen/user/v1;v1";
+
+service UserService {
+    rpc CreateUser(CreateUserReq) returns (CreateUserRsp) {}
+    rpc Common(common.v1.Req) returns (common.v1.Rsp) {}
+}
+
+message CreateUserReq {
+    string username = 1;
+    string password = 2;
+}
+
+message CreateUserRsp {
+    string id = 1;
+    string username = 2;
+    string password = 3;
+}

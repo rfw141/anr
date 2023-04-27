@@ -1,0 +1,18 @@
+version: v1
+managed:
+  enabled: true
+  go_package_prefix:
+#    default: github.com/rfw141/anr/gen
+plugins:
+  - plugin: buf.build/protocolbuffers/go:v1.28.1
+    out: gen
+#    opt: paths=source_relative
+#    opt: paths=import
+    opt: module=github.com/rfw141/anr/gen
+  - plugin: buf.build/grpc/go
+    out: gen
+#    opt: paths=source_relative
+    opt: module=github.com/rfw141/anr/gen
+#  - plugin: buf.build/bufbuild/connect-go
+#    out: gen
+#    opt: paths=source_relative

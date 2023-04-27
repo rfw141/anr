@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package common.v1;
+
+option go_package = "github.com/rfw141/anr/gen/common/v1;v1";
+
+
+message Req {
+
+}
+message Rsp {
+
+}

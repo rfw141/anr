@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.28.1
 // 	protoc        (unknown)
-// source: common.proto
+// source: common.v1.proto
 
 package v1
 
@@ -29,7 +29,7 @@ type Req struct {
 func (x *Req) Reset() {
 	*x = Req{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_common_proto_msgTypes[0]
+		mi := &file_common_v1_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -42,7 +42,7 @@ func (x *Req) String() string {
 func (*Req) ProtoMessage() {}
 
 func (x *Req) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[0]
+	mi := &file_common_v1_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *Req) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Req.ProtoReflect.Descriptor instead.
 func (*Req) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{0}
+	return file_common_v1_proto_rawDescGZIP(), []int{0}
 }
 
 type Rsp struct {
@@ -67,7 +67,7 @@ type Rsp struct {
 func (x *Rsp) Reset() {
 	*x = Rsp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_common_proto_msgTypes[1]
+		mi := &file_common_v1_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -80,7 +80,7 @@ func (x *Rsp) String() string {
 func (*Rsp) ProtoMessage() {}
 
 func (x *Rsp) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[1]
+	mi := &file_common_v1_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -93,44 +93,44 @@ func (x *Rsp) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Rsp.ProtoReflect.Descriptor instead.
 func (*Rsp) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{1}
+	return file_common_v1_proto_rawDescGZIP(), []int{1}
 }
 
-var File_common_proto protoreflect.FileDescriptor
+var File_common_v1_proto protoreflect.FileDescriptor
 
-var file_common_proto_rawDesc = []byte{
-	0x0a, 0x0c, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x09,
-	0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x76, 0x31, 0x22, 0x05, 0x0a, 0x03, 0x52, 0x65, 0x71,
-	0x22, 0x05, 0x0a, 0x03, 0x52, 0x73, 0x70, 0x42, 0x89, 0x01, 0x0a, 0x0d, 0x63, 0x6f, 0x6d, 0x2e,
-	0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x76, 0x31, 0x42, 0x0b, 0x43, 0x6f, 0x6d, 0x6d, 0x6f,
-	0x6e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x26, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62,
-	0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x72, 0x66, 0x77, 0x31, 0x34, 0x31, 0x2f, 0x61, 0x6e, 0x72, 0x2f,
-	0x67, 0x65, 0x6e, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x76, 0x31, 0x3b, 0x76, 0x31,
-	0xa2, 0x02, 0x03, 0x43, 0x58, 0x58, 0xaa, 0x02, 0x09, 0x43, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e,
-	0x56, 0x31, 0xca, 0x02, 0x09, 0x43, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x5c, 0x56, 0x31, 0xe2, 0x02,
-	0x15, 0x43, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x5c, 0x56, 0x31, 0x5c, 0x47, 0x50, 0x42, 0x4d, 0x65,
-	0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0xea, 0x02, 0x0a, 0x43, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x3a,
-	0x3a, 0x56, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+var file_common_v1_proto_rawDesc = []byte{
+	0x0a, 0x0f, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x76, 0x31, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x12, 0x09, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x76, 0x31, 0x22, 0x05, 0x0a, 0x03,
+	0x52, 0x65, 0x71, 0x22, 0x05, 0x0a, 0x03, 0x52, 0x73, 0x70, 0x42, 0x8b, 0x01, 0x0a, 0x0d, 0x63,
+	0x6f, 0x6d, 0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x76, 0x31, 0x42, 0x0d, 0x43, 0x6f,
+	0x6d, 0x6d, 0x6f, 0x6e, 0x56, 0x31, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x26, 0x67,
+	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x72, 0x66, 0x77, 0x31, 0x34, 0x31,
+	0x2f, 0x61, 0x6e, 0x72, 0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2f,
+	0x76, 0x31, 0x3b, 0x76, 0x31, 0xa2, 0x02, 0x03, 0x43, 0x58, 0x58, 0xaa, 0x02, 0x09, 0x43, 0x6f,
+	0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x56, 0x31, 0xca, 0x02, 0x09, 0x43, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e,
+	0x5c, 0x56, 0x31, 0xe2, 0x02, 0x15, 0x43, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x5c, 0x56, 0x31, 0x5c,
+	0x47, 0x50, 0x42, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0xea, 0x02, 0x0a, 0x43, 0x6f,
+	0x6d, 0x6d, 0x6f, 0x6e, 0x3a, 0x3a, 0x56, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_common_proto_rawDescOnce sync.Once
-	file_common_proto_rawDescData = file_common_proto_rawDesc
+	file_common_v1_proto_rawDescOnce sync.Once
+	file_common_v1_proto_rawDescData = file_common_v1_proto_rawDesc
 )
 
-func file_common_proto_rawDescGZIP() []byte {
-	file_common_proto_rawDescOnce.Do(func() {
-		file_common_proto_rawDescData = protoimpl.X.CompressGZIP(file_common_proto_rawDescData)
+func file_common_v1_proto_rawDescGZIP() []byte {
+	file_common_v1_proto_rawDescOnce.Do(func() {
+		file_common_v1_proto_rawDescData = protoimpl.X.CompressGZIP(file_common_v1_proto_rawDescData)
 	})
-	return file_common_proto_rawDescData
+	return file_common_v1_proto_rawDescData
 }
 
-var file_common_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_common_proto_goTypes = []interface{}{
+var file_common_v1_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_common_v1_proto_goTypes = []interface{}{
 	(*Req)(nil), // 0: common.v1.Req
 	(*Rsp)(nil), // 1: common.v1.Rsp
 }
-var file_common_proto_depIdxs = []int32{
+var file_common_v1_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -138,13 +138,13 @@ var file_common_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_common_proto_init() }
-func file_common_proto_init() {
-	if File_common_proto != nil {
+func init() { file_common_v1_proto_init() }
+func file_common_v1_proto_init() {
+	if File_common_v1_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_common_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_common_v1_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Req); i {
 			case 0:
 				return &v.state
@@ -156,7 +156,7 @@ func file_common_proto_init() {
 				return nil
 			}
 		}
-		file_common_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_common_v1_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Rsp); i {
 			case 0:
 				return &v.state
@@ -173,18 +173,18 @@ func file_common_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_common_proto_rawDesc,
+			RawDescriptor: file_common_v1_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_common_proto_goTypes,
-		DependencyIndexes: file_common_proto_depIdxs,
-		MessageInfos:      file_common_proto_msgTypes,
+		GoTypes:           file_common_v1_proto_goTypes,
+		DependencyIndexes: file_common_v1_proto_depIdxs,
+		MessageInfos:      file_common_v1_proto_msgTypes,
 	}.Build()
-	File_common_proto = out.File
-	file_common_proto_rawDesc = nil
-	file_common_proto_goTypes = nil
-	file_common_proto_depIdxs = nil
+	File_common_v1_proto = out.File
+	file_common_v1_proto_rawDesc = nil
+	file_common_v1_proto_goTypes = nil
+	file_common_v1_proto_depIdxs = nil
 }

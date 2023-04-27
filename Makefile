@@ -1,3 +1,14 @@
+.PHONY: push
+# push
+push:
+	git add .
+	git commit -m "ok"
+	git push origin master
+
+.PHONY: tidy
+# tidy
+tidy:
+	go mod tidy
 
 .PHONY: buf
 # generate proto

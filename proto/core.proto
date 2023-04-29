@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+import "google/protobuf/duration.proto";
+
+package core;
+
+option go_package = "github.com/rfw141/anr/gen/core;core";
+
+message Req {
+
+}
+message Rsp {
+
+}
+
+message Config {
+    message Service {
+        string addr = 2;
+        string network = 3;
+        google.protobuf.Duration timeout = 4;
+    }
+    message Registry {
+        message Etcd {
+            repeated string endpoints = 1;
+        }
+        Etcd etcd = 1;
+    }
+    map<string, Service> services = 1;
+    Registry registry = 2;
+}

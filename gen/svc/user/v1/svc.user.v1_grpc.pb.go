@@ -2,13 +2,13 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: user.v1.proto
+// source: svc.user.v1.proto
 
 package v1
 
 import (
 	context "context"
-	v1 "github.com/rfw141/anr/gen/common/v1"
+	core "github.com/rfw141/anr/gen/core"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -20,8 +20,8 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	UserService_CreateUser_FullMethodName = "/user.v1.UserService/CreateUser"
-	UserService_Common_FullMethodName     = "/user.v1.UserService/Common"
+	UserService_CreateUser_FullMethodName = "/svc.user.v1.UserService/CreateUser"
+	UserService_Common_FullMethodName     = "/svc.user.v1.UserService/Common"
 )
 
 // UserServiceClient is the client API for UserService service.
@@ -29,7 +29,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type UserServiceClient interface {
 	CreateUser(ctx context.Context, in *CreateUserReq, opts ...grpc.CallOption) (*CreateUserRsp, error)
-	Common(ctx context.Context, in *v1.Req, opts ...grpc.CallOption) (*v1.Rsp, error)
+	Common(ctx context.Context, in *core.Req, opts ...grpc.CallOption) (*core.Rsp, error)
 }
 
 type userServiceClient struct {
@@ -49,8 +49,8 @@ func (c *userServiceClient) CreateUser(ctx context.Context, in *CreateUserReq, o
 	return out, nil
 }
 
-func (c *userServiceClient) Common(ctx context.Context, in *v1.Req, opts ...grpc.CallOption) (*v1.Rsp, error) {
-	out := new(v1.Rsp)
+func (c *userServiceClient) Common(ctx context.Context, in *core.Req, opts ...grpc.CallOption) (*core.Rsp, error) {
+	out := new(core.Rsp)
 	err := c.cc.Invoke(ctx, UserService_Common_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -63,7 +63,7 @@ func (c *userServiceClient) Common(ctx context.Context, in *v1.Req, opts ...grpc
 // for forward compatibility
 type UserServiceServer interface {
 	CreateUser(context.Context, *CreateUserReq) (*CreateUserRsp, error)
-	Common(context.Context, *v1.Req) (*v1.Rsp, error)
+	Common(context.Context, *core.Req) (*core.Rsp, error)
 	mustEmbedUnimplementedUserServiceServer()
 }
 
@@ -74,7 +74,7 @@ type UnimplementedUserServiceServer struct {
 func (UnimplementedUserServiceServer) CreateUser(context.Context, *CreateUserReq) (*CreateUserRsp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateUser not implemented")
 }
-func (UnimplementedUserServiceServer) Common(context.Context, *v1.Req) (*v1.Rsp, error) {
+func (UnimplementedUserServiceServer) Common(context.Context, *core.Req) (*core.Rsp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Common not implemented")
 }
 func (UnimplementedUserServiceServer) mustEmbedUnimplementedUserServiceServer() {}
@@ -109,7 +109,7 @@ func _UserService_CreateUser_Handler(srv interface{}, ctx context.Context, dec f
 }
 
 func _UserService_Common_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(v1.Req)
+	in := new(core.Req)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -121,7 +121,7 @@ func _UserService_Common_Handler(srv interface{}, ctx context.Context, dec func(
 		FullMethod: UserService_Common_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServiceServer).Common(ctx, req.(*v1.Req))
+		return srv.(UserServiceServer).Common(ctx, req.(*core.Req))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -130,7 +130,7 @@ func _UserService_Common_Handler(srv interface{}, ctx context.Context, dec func(
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var UserService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "user.v1.UserService",
+	ServiceName: "svc.user.v1.UserService",
 	HandlerType: (*UserServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -143,5 +143,5 @@ var UserService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "user.v1.proto",
+	Metadata: "svc.user.v1.proto",
 }

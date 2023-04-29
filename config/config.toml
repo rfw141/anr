@@ -1,0 +1,9 @@
+[services]
+
+[services.user]
+#addr = "0.0.0.0:9000"
+
+[registry]
+
+[registry.etcd]
+endpoints = ["127.0.0.1:2379"]

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package svc.admin.v1;
+
+option go_package = "github.com/rfw141/anr/gen/svc/admin/v1;v1";
+
+service AdminService {
+    rpc CreateUser(CreateUserReq) returns (CreateUserRsp) {}
+}
+
+message CreateUserReq {
+    string username = 1;
+    string password = 2;
+}
+
+message CreateUserRsp {
+    string id = 1;
+    string username = 2;
+    string password = 3;
+}
